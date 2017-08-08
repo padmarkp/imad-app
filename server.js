@@ -5,6 +5,41 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articleOne = {
+    title: 'Article one | Padmarkp',
+    heading: 'Article one',
+    date:'Aug 8,2017',
+    content: `
+                                        <p>
+                                            1. Who discovered neutron?
+                                            A. Chadwick
+                                        </p>
+                                        <p> 2. Who invented Cinematography?
+                                            A. Edison
+                                        </p>
+                                        
+                                        <p>
+                                            3. Who discovered oxygen?
+                                            A. Joseph Priestley
+                                        </p>
+                                        <p>
+                                            4. Who invented Innert gases?
+                                            A. Ramsay
+                                        </p>
+                                        <p>
+                                            5. Who produced the Theory of Evolution?
+                                            A. Darwin
+                                         </p>
+                                         <p>
+                                            6.Stethoscope was invented by ?
+                                            A.Henry Becquarrel
+                                        </p `
+                                                
+    };
+
+
+
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
