@@ -16,10 +16,10 @@
 //    var interval= setInterval(moveRight , 5 );
 //};
 
-var button= document.getElementById('button_id');
+var button= document.getElementById('button');
 
 var counter=0;
-button_id.onclick = function()
+button.onclick = function()
 {
     var request = new XMLHttpRequest();
     request.onreadyStateChange =  function()
