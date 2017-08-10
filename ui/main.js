@@ -1,4 +1,4 @@
-console.log('Loaded!');
+//console.log('Loaded!');
 // change the text 
 //var element= document.getElementById('main-text');
 //element.innerHTML="new value";
@@ -15,8 +15,10 @@ console.log('Loaded!');
 //    //img.style.marginLeft='50px';
 //    var interval= setInterval(moveRight , 5 );
 //};
-var counter=0;
+
 var button= document.getElementById('counter');
+
+var counter=0;
 button.onclick = function()
 {
     counter=counter+1;
