@@ -4,14 +4,14 @@ var element= document.getElementById('main-text');
 element.innerHTML="new value";
 
 var img = document.getElementById('madi');
-var marginLeft=0;
-function moveLeft()
+var marginRight=0;
+function moveRight()
 {
-    marginLeft=marginLeft+10;
-    img.style.marginLeft= marginLeft+'px';
+    marginRight=marginRight+10;
+    img.style.marginRight= marginRight+'px';
 }
 img.onclick = function ()
 {
     //img.style.marginLeft='50px';
-    var interval= setInterval(moveLeft , 10 );
+    var interval= setInterval(moveRight , 10 );
 };
