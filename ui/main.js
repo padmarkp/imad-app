@@ -21,8 +21,22 @@ var button= document.getElementById('counter');
 var counter=0;
 button_id.onclick = function()
 {
-    counter=counter+1;
-    var span=document.getElementById('count');
-    span.innerHTML=counter.toString();
+    var request = new XMLHttpRequest();
+    request.onreadyStateChange =  function()
+    {
+        if (request.readystate=== XMLHttpRequest.DONE);
+        
+        if (request.status===200) 
+        {
+         var counter=request.responeText;
+         var span=document.getElementById('count');
+         span.innerHTML=counter.toString();
+        }
+        
+    };
+    
+    request.Open('GET' , 'http://padmarkp.imad.hasura-app.io', true);
+    request.send(null);
+    
     
 };
