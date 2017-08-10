@@ -7,6 +7,6 @@ var img = document.getElementById('madi-img');
 
 img.onclick = function ()
 {
-    img.style.marginLeft='400px';
+    img.style.marginLeft='50px';
     
 };
