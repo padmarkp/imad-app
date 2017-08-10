@@ -35,7 +35,7 @@ button_id.onclick = function()
         
     };
     
-    request.Open('GET' , 'http://padmarkp.imad.hasura-app.io/counter', true);
+    request.open('GET' , 'http://padmarkp.imad.hasura-app.io/counter', true);
     request.send(null);
     
     
