@@ -16,7 +16,7 @@
 //    var interval= setInterval(moveRight , 5 );
 //};
 
-var button= document.getElementById('counter');
+var button= document.getElementById('button_id');
 
 var counter=0;
 button_id.onclick = function()
