@@ -1,9 +1,17 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-
+var Pool = reuire('pg').Pool;
 var app = express();
 app.use(morgan('combined'));
+
+var config={
+    user: 'padmarkp',
+    database: 'padmarkp',
+    host:'db.imad.asura.app.io',
+    port:'5432',
+    password:process.env.DB_PASSWORD
+};
 
 var articles = {
 'article-one' : {
@@ -104,11 +112,14 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+
+
 var counter=0;
 app.get('/counter',  function(req, res){
     counter=counter+1;
     res.send(counter.toString());
 });
+
 
 app.get('/:articleName', function (req, res) {
     var articleName=req.params.articleName;
