@@ -140,7 +140,7 @@ pool.query("select * from article where title='"+ req.params.articleName+"' ", f
         else
         {
             var articleData = result.rows[0];
-             res.send(createTemplate(articles[articleData]));
+             res.send(createTemplate(article[articleData]));
         }
     }
 });
