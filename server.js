@@ -128,7 +128,7 @@ app.get('/counter',  function(req, res){
 app.get('article/:articleName', function (req, res) {
     var articleName=req.params.articleName;
 
-pool.query("select * from article where title='"+ req.params.articleName+"' ", function(req,res){
+pool.query("SELECT * FROM article where title='"+ req.params.articleName+"' ", function(req,res){
     if(err){
         res.status(500).send(err.toString());
     }
