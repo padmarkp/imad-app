@@ -18,7 +18,7 @@
 
 var button= document.getElementById('button');
 
-var counter=0;
+
 button.onclick = function()
 {
     var request = new XMLHttpRequest();
@@ -35,7 +35,7 @@ button.onclick = function()
         
     };
     
-    request.open("GET", 'http://padmarkp.imad.hasura-app.io/counter', true);
+    request.open('GET', 'http://padmarkp.imad.hasura-app.io/counter', true);
     request.send(null);
     
     
