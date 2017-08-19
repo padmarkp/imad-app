@@ -134,13 +134,25 @@ app.get('/counter',  function(req, res){
     res.send(counter.toString());
 });
 
+
+//to extract a bit of string usng parameter
 var names = [];
 app.get ('/submit-name/:name', function(req, res){
-    var name = req.params.name;
+    var name = req.query.name;
     
     names.push(name);
     res.send(JSON.stringify(names));//to convert array into string
-})
+});
+
+//to extract a bit of string using query parameter(? just change params to query)
+
+
+
+
+
+
+
+
 /*
 app.get('/articles/:articleName', function (req, res) {
 var articleName=req.params.articleName;
