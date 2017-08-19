@@ -140,7 +140,7 @@ app.get('/counter',  function(req, res){
 //to extract a bit of string using query parameter(? just change params to query)
 
 var names = [];
-app.get ('/submit-name/:name', function(req, res){
+app.get ('/submit-name', function(req, res){
     var name = req.query.name;
     
     names.push(name);
