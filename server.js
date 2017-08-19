@@ -136,6 +136,9 @@ app.get('/counter',  function(req, res){
 
 
 //to extract a bit of string usng parameter
+
+//to extract a bit of string using query parameter(? just change params to query)
+
 var names = [];
 app.get ('/submit-name/:name', function(req, res){
     var name = req.query.name;
@@ -144,16 +147,12 @@ app.get ('/submit-name/:name', function(req, res){
     res.send(JSON.stringify(names));//to convert array into string
 });
 
-//to extract a bit of string using query parameter(? just change params to query)
 
 
 
 
 
 
-
-
-/*
 app.get('/articles/:articleName', function (req, res) {
 var articleName=req.params.articleName;
 
@@ -185,7 +184,7 @@ else
     }
 });
 });
-*/
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
