@@ -69,7 +69,7 @@ var articles = {
     }
 };
     
-    function createTemplate(data){
+ function createTemplate(data){
         var title=data.title;
         var date=data.date;
         var heading=data.heading;
@@ -113,7 +113,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var pool= new Pool(config);
+/*var pool= new Pool(config);
 
 app.get('/test-db', function(req,res){
     pool.query("SELECT * FROM test" , function(err, result){
@@ -127,33 +127,53 @@ app.get('/test-db', function(req,res){
     });
 });
 
-
+*/
 var counter=0;
 app.get('/counter',  function(req, res){
     counter = counter + 1;
     res.send(counter.toString());
 });
 
+var names = [];
+app.get ('/submit-name/:name', function(req, res){
+    var name = req.params.name;
+    
+    names.push(name);
+    res.send(JSON.stringify(names));//to convert array into string
+})
+/*
 app.get('/articles/:articleName', function (req, res) {
-    var articleName=req.params.articleName;
+var articleName=req.params.articleName;
+
 
 pool.query("SELECT * FROM article where title='"+ req.params.articleName + "' ", function(req,result){
-    if(err){
-        res.status(500).send(err.toString());
+ 
+if(err){
+
+res.status(500).send(err.toString());
     }
-    else
+
+else
+
     {
+
         if(result.rows.length===0)
+
         {res.status(404).send('article not found');
-        }
+ 
+       }
+
         else
+
         {
+
             var articleData = result.rows[0];
              res.send(createTemplate(articles[articleData]));
-        }
+       }
     }
 });
 });
+*/
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
