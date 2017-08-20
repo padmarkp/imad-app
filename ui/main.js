@@ -4,7 +4,7 @@ button.onclick = function()
     var request = new XMLHttpRequest();
     request.onreadyStateChange =  function()
     {
-        if (request.readystate === XMLHttpRequest.DONE);
+        if (request.readystate === XMLHttpRequest.DONE)
         {
         if (request.status === 200) 
         {
@@ -17,6 +17,27 @@ button.onclick = function()
     request.open('GET', 'http://padmarkp.imad.hasura-app.io/counter', true);
     request.send(null);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 var submit= document.getElementById('submit_btn');
 submit.onClick = function()
