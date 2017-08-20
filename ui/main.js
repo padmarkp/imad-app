@@ -17,8 +17,7 @@
 //};
 
 var button= document.getElementById('button');
-window.onload= function()
-{
+
 button.onclick = function()
 {
     var request = new XMLHttpRequest();
@@ -39,7 +38,6 @@ button.onclick = function()
     request.send(null);
     
     
-};
 };
 
 var submit= document.getElementById('submit_btn');
