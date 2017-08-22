@@ -8,7 +8,7 @@ app.use(morgan('combined'));
 var config={
     user: 'padmarkp',
     database: 'padmarkp',
-    host:'db.imad.hasura-app.io',
+    host:'db.imad.hasura-app.io',           /*got error and solved */
     port:'5432',
     password: process.env.DB_PASSWORD
 };
@@ -122,7 +122,7 @@ app.get('/test-db', function(req,res){
         }
         else
         {
-            res.send(JSON.stringify(result));
+            res.send(JSON.stringify(result.rows));
         }
     });
 });
