@@ -4,7 +4,6 @@ var path = require('path');
 var Pool = require('pg').Pool;
 var app = express();
 app.use(morgan('combined'));
-app.use(bodyParson.json());
 
 var config={
     user: 'padmarkp',
