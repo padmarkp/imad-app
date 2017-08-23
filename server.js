@@ -114,7 +114,7 @@ app.get('/', function (req, res) {
 
 var pool= new Pool(config);
 
-/*app.get('/test-db', function(req,res){
+app.get('/test-db', function(req,res){
     pool.query('SELECT * FROM test ' , function(err, result){
         if(err){
             res.status(500).send(err.toString());
@@ -126,26 +126,25 @@ var pool= new Pool(config);
     });
 });
 
-*/
-/*var counter=0;
+var counter=0;
 app.get('/counter',  function(req, res){
     counter = counter + 1;
     res.send(counter.toString());
 });
-*/
+
 
 //to extract a bit of string usng parameter
 
 //to extract a bit of string using query parameter(? just change params to query)
 
-/*var names = [];
+var names = [];
 app.get ('/submit-name', function(req, res){
     var name = req.query.name;
     
     names.push(name);
     res.send(JSON.stringify(names));//to convert array into string
 });
-*/
+
 
 app.get('/articles/:articleName', function (req, res)
 {
