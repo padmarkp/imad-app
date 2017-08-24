@@ -24,14 +24,14 @@ var submit= document.getElementById('submit_btn');
 submit.onclick = function()
 {
   var request = new XMLHttpRequest();
-    request.onreadyStateChange =  function()
+    request.onreadystatechange =  function()
     {
         if (request.readystate === XMLHttpRequest.DONE);
-        
+        {
         if (request.status === 200) 
         {
          var names = request.responseText;
-    names = JSON.parse(names);
+    names = JSON.parse(names);/* parse used toconvert string back into an array*/
     
     var list='';
     for(var i=0; i< name.length ; i++)
@@ -40,9 +40,9 @@ submit.onclick = function()
     }
 var ul= document.getElementById('namelist');
 ul.innerHTML = list;
+}
+}
 };
-
-
-/*request.open('GET', 'http://padmarkp.imad.hasura-app.io/submit-name?name='+ name, true);
-    request.send(null);
-};*/
+request.open('GET', 'http://padmarkp.imad.hasura-app.io/submit-name?name='+ name, true);
+request.send(null);
+};
