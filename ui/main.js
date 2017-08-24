@@ -20,11 +20,10 @@ button.onclick = function()
 
 var nameInput= document.getElementById('name');
 var name = nameInput.value;
-
 var submit= document.getElementById('submit_btn');
 submit.onClick = function()
 {
-   var request = new XMLHttpRequest();
+  /* var request = new XMLHttpRequest();
     request.onreadyStateChange =  function()
     {
         if (request.readystate === XMLHttpRequest.DONE);
@@ -32,19 +31,18 @@ submit.onClick = function()
         if (request.status === 200) 
         {
          var names = request.responseText;
-    names = JSON.parse(names);
+    names = JSON.parse(names);*/
+    var names = ['name1', 'name2', 'name3'];
     var list='';
     for(var i=0; i< name.length ; i++)
     {
     list +='<li>' + names[i] + '</li>';
-    
-     }
+    }
 var ul= document.getElementById('namelist');
 ul.innerHTML =list;
-}
-}
-}
-
-request.open('GET', 'http://padmarkp.imad.hasura-app.io/submit-name?name='+ name, true);
-    request.send(null);
 };
+
+
+/*request.open('GET', 'http://padmarkp.imad.hasura-app.io/submit-name?name='+ name, true);
+    request.send(null);
+};*/
