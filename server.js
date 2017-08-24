@@ -20,61 +20,6 @@ app.use(bodyParser.json());
 
 var pool= new Pool(config);
 
-/*var articles = {
-'article-one' : {
-    title: 'Article one | Padmarkp',
-    heading: 'Article one',
-    date:'Aug 8,2017',
-    content: `
-                                        <p>
-                                            1. Who discovered neutron?
-                                            A. Chadwick
-                                        </p>
-                                        <p> 2. Who invented Cinematography?
-                                            A. Edison
-                                        </p>
-                                        
-                                        <p>
-                                            3. Who discovered oxygen?
-                                            A. Joseph Priestley
-                                        </p>
-                                        <p>
-                                            4. Who invented Innert gases?
-                                            A. Ramsay
-                                        </p>
-                                        <p>
-                                            5. Who produced the Theory of Evolution?
-                                            A. Darwin
-                                         </p>
-                                         <p>
-                                            6.Stethoscope was invented by ?
-                                            A.Henry Becquarrel
-                                        </p `
-                                                
-    },
-'article-two' :{
-    title: 'Article Two | Padmarkp',
-    heading: 'Article Two',
-    date:'Aug 10,2017',
-    content: `
-                                        <p>
-                                            1. Who discovered bulb?
-                                            A. Edison
-                                        </p>`
-    },
-'article-three':{
-    title: 'Article Three | Padmarkp',
-    heading: 'Article Three',
-    date:'Aug 20,2017',
-    content: `
-                                        <p>
-                                            1. Who discovered neutron?
-                                            A. Chadwick
-                                        </p>`
-    
-    }
-};
-  */ 
  function createTemplate(data){
         var title  =data.title;
         var date  =data.date;
