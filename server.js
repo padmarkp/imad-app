@@ -151,13 +151,18 @@ app.get ('/submit-name/:name', function(req, res){
 app.get ('/submit-name', function(req, res){
     var name = req.query.name;
     names.push(name);
-    res.send(JSON.stringify(names));//to convert array into string
+    res.send(JSON.stringify(names));// JSON is used to convert array into string
 });
 
+/*app.get('/:articleName', function(re, res)
+{
+    var articleName = req.params.articleName;
+    res.send(createTemplate(articles[articleName]));
+});
+*/
 
 app.get('/:articleName', function (req, res)/*/: sending data as part of the url*/
 {
-
 pool.query("SELECT * FROM article WHERE title=$1"+ [req.params.articleName], function(err,result){
 if(err){
 res.status(500).send(err.toString());
