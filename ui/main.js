@@ -3,7 +3,7 @@ var button= document.getElementById('counter');//ModuleP6----------still pending
 button.onClick = function()
 {
     var request = new XMLHttpRequest();   //create request
-    request.onReadyStateChange =  function()
+    request.onreadystatechange =  function()
     {
         if (request.readystate === XMLHttpRequest.DONE)
         {
