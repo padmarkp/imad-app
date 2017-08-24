@@ -23,16 +23,16 @@ var name = nameInput.value;
 var submit= document.getElementById('submit_btn');
 submit.onclick = function()
 {
-  /* var request = new XMLHttpRequest();
+  var request = new XMLHttpRequest();
     request.onreadyStateChange =  function()
     {
         if (request.readystate === XMLHttpRequest.DONE);
-        {
+        
         if (request.status === 200) 
         {
          var names = request.responseText;
-    names = JSON.parse(names);*/
-    var names = ['name1', 'name2', 'name3', 'name4'];
+    names = JSON.parse(names);
+    
     var list='';
     for(var i=0; i< name.length ; i++)
     {
