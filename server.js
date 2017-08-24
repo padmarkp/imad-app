@@ -113,6 +113,7 @@ app.get('/', function (req, res) {
 });
 
 var pool= new Pool(config);
+/*18/08/17: Testconnection to database: this part is working */
 
 app.get('/test-db', function(req,res){
     pool.query('SELECT * FROM test ' , function(err, result){
@@ -125,6 +126,8 @@ app.get('/test-db', function(req,res){
         }
     });
 });
+
+/*12/08/17: Counter variable is also working*/
 
 var counter=0;
 app.get('/counter',  function(req, res){
