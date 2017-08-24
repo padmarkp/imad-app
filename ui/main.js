@@ -1,6 +1,6 @@
-var button= document.getElementById('counter');
+var button= document.getElementById('counter');//ModuleP6----------still pending
 
-button.onclick = function()
+button.onClick = function()
 {
     var request = new XMLHttpRequest();   //create request
     request.onReadyStateChange =  function()
