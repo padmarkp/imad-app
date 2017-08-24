@@ -8,12 +8,15 @@ button.onclick = function()
         {
         if (request.status === 200) 
         {
-            var counter = request.responseText();
+            var counter = request.responseText();                
+            
+            //we r making a request to webserver without refreshing is called     singlepage apps and al the changes happen withing that page.this action is called client sidde action like gmail.
+            
             var span=document.getElementById('count');
             span.innerHTML=counter.toString();
         }
         }
-    };
+    }; 
     request.open('GET', 'http://padmarkp.imad.hasura-app.io/counter', true);//make request
     request.send(null);
 };
