@@ -141,14 +141,15 @@ app.get('/counter',  function(req, res){
 
 
 var names = [];
-app.get ('/submit-name/:name', function(req, res){
+/*app.get ('/submit-name/:name', function(req, res){
     var name = req.params.name;
     names.push(name);
     res.send(JSON.stringify(names));//to convert array into string
 });
-
+*/
 
 //to extract a bit of string using query parameter(? just change params to query)
+
 app.get ('/submit-name', function(req, res){
     var name = req.query.name;
     names.push(name);
@@ -156,7 +157,7 @@ app.get ('/submit-name', function(req, res){
 });
 
 
-app.get('/articles/:articleName', function (req, res)/*/: sending data as part of the url*/
+app.get('/:articleName', function (req, res)/*/: sending data as part of the url*/
 {
 
 pool.query("SELECT * FROM article WHERE title=$1"+ [req.params.articleName], function(err,result){
