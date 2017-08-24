@@ -13,7 +13,7 @@ var config={
     password: process.env.DB_PASSWORD
 };
 
-var articles = {
+/*var articles = {
 'article-one' : {
     title: 'Article one | Padmarkp',
     heading: 'Article one',
@@ -67,7 +67,7 @@ var articles = {
     
     }
 };
-   
+  */ 
  function createTemplate(data){
         var title=data.title;
         var date=data.date;
