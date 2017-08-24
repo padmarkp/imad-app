@@ -138,11 +138,19 @@ app.get('/counter',  function(req, res){
 
 //to extract a bit of string usng parameter
 
-//to extract a bit of string using query parameter(? just change params to query)
+
 
 var names = [];
 app.get ('/submit-name/:name', function(req, res){
     var name = req.params.name;
+    names.push(name);
+    res.send(JSON.stringify(names));//to convert array into string
+});
+
+
+//to extract a bit of string using query parameter(? just change params to query)
+app.get ('/submit-name', function(req, res){
+    var name = req.query.name;
     names.push(name);
     res.send(JSON.stringify(names));//to convert array into string
 });
