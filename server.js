@@ -127,7 +127,7 @@ app.get('/test-db', function(req,res){
     });
 });
 
-/*12/08/17: Counter variable is also working*/
+/* Counter variable is also working---------------------working[12/08/17]*/
 
 var counter=0;
 app.get('/counter',  function(req, res){
@@ -136,19 +136,17 @@ app.get('/counter',  function(req, res){
 });
 
 
-//to extract a bit of string usng parameter
-
-
+//to extract a bit of string usng parameter i.e sending data as part of url------------this is also working[24/08/17]
 
 var names = [];
-/*app.get ('/submit-name/:name', function(req, res){
+app.get ('/submit-name/:name', function(req, res){
     var name = req.params.name;
     names.push(name);
     res.send(JSON.stringify(names));//to convert array into string
 });
-*/
 
-//to extract a bit of string using query parameter(? just change params to query)
+
+//to extract a bit of string using query parameter(? just change params to query)--------------this is also working[24/08/17]
 
 app.get ('/submit-name', function(req, res){
     var name = req.query.name;
