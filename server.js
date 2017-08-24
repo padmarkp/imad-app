@@ -141,15 +141,14 @@ app.get('/counter',  function(req, res){
 //to extract a bit of string using query parameter(? just change params to query)
 
 var names = [];
-app.get ('/submit-name', function(req, res){
-    var name = req.query.name;
-    
+app.get ('/submit-name/:name', function(req, res){
+    var name = req.params.name;
     names.push(name);
     res.send(JSON.stringify(names));//to convert array into string
 });
 
 
-app.get('/articles/:articleName', function (req, res)
+app.get('/articles/:articleName', function (req, res)/*/: sending data as part of the url*/
 {
 
 pool.query("SELECT * FROM article WHERE title=$1"+ [req.params.articleName], function(err,result){
