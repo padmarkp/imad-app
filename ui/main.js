@@ -14,7 +14,7 @@ button.onClick = function()
             //we r making a request to webserver without refreshing is called     singlepage apps and al the changes happen withing that page.this action is called client sidde action like gmail.
             
             var span=document.getElementById('count');
-            span.innerHTML = counter.toString();
+            span.innerhtml = counter.toString();
         }
         }
     }; 
