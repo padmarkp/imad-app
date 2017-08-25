@@ -37,7 +37,7 @@ Submit.onClick= function()
         alert("Something went wrong on the server");
         }
     }
-
+};
 var username= document.getElementById('username').value;
 var password= document.getElementById('password').value;
 console.log(username);
@@ -48,11 +48,3 @@ request.send(JSON.stringify({username: username, password: password}));
 };
 
 
-
-
-
-
-
-
-
-};
