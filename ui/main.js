@@ -1,11 +1,22 @@
-var button= document.getElementById("counter");        //ModuleP6----------still pending
-
-button.onClick = function()
-{
-            counter = counter+1;        
-            var span=document.getElementById("count");
-            span.innerHTML = counter.toString();
- };
+function exec(){
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function() 
+    {
+          if (request.readyState === XMLHttpRequest.DONE) 
+          {
+              //Take Some Action
+              if (request.status === 200) 
+                { 
+                    var counter = request.responseText; 
+                    var span = document.getElementById('count');
+                    span.innerHTML = counter.toString();
+                } 
+          } 
+    }; 
+    request.open("GET", "http://kogam22.imad.hasura-app.io/counter", true);
+    request.send(); 
+    console.log('EXECUTED');
+}
 
 
 var submit= document.getElementById('submit_btn');
