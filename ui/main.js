@@ -1,4 +1,4 @@
-var button= document.getElementById('counter');        //ModuleP6----------still pending
+var button= document.getElementById("counter");        //ModuleP6----------still pending
 
 button.onClick = function()
 {
