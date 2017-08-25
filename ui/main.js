@@ -1,4 +1,6 @@
-function exec(){
+var button=document.getElementById("counter");
+button.onclick = function()
+{
     var request = new XMLHttpRequest();
     request.onreadystatechange = function() 
     {
@@ -13,10 +15,10 @@ function exec(){
                 } 
           } 
     }; 
-    request.open("GET", "http://kogam22.imad.hasura-app.io/counter", true);
-    request.send(); 
-    console.log('EXECUTED');
-}
+    request.open("GET", "http://padmarkp.imad.hasura-app.io/counter", true);
+    request.send(null);
+
+};
 
 
 var submit= document.getElementById('submit_btn');
